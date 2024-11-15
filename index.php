@@ -10,15 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <title>To-Do List</title>
 </head>
-<body>
+<body class="dark">
     <header>
         <nav>
             <h2>You are not signed in</h2>
         </nav>
     </header>
     <main>
-        <h1>Welcome on your To-Do list</h1>
-        <p>Your data could be lost if you remain logged off</p>
+        <section class="card">
+            <h1>Welcome on your To-Do list</h1>
+            <p>Your data could be lost if you remain logged off</p>
+        </section>
     </main>
     <footer>
         <p>All rights reserved - Florian Antoine</p>
