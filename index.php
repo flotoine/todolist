@@ -19,6 +19,18 @@
     <main>
         <section class="card">
             <h1>Welcome on your To-Do list</h1>
+            <form>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title">
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" rows="5" cols="33">
+                It was a dark and stormy night...
+                </textarea>
+                <input type="submit" value="Submit" onclick="alert('click')">
+            </form>
+            <?php
+                require 'Task.php'
+            ?>
             <p>Your data could be lost if you remain logged off</p>
         </section>
     </main>
