@@ -1,3 +1,8 @@
+<?php
+$tasks = file('tasks.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,18 +24,22 @@
     <main>
         <section class="card">
             <h1>Welcome on your To-Do list</h1>
-            <form>
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title">
-                <label for="content">Content:</label>
-                <textarea id="content" name="content" rows="5" cols="33">
-                It was a dark and stormy night...
-                </textarea>
-                <input type="submit" value="Submit" onclick="alert('click')">
+            <h2>Add a new task</h2>
+            <form action="add.php" method="POST">
+                <input type="text" name="task" required>
+                <button type="submit">Add</button>
             </form>
-            <?php
-                require 'Task.php'
-            ?>
+
+            <h2>Tasks</h2>
+                <ul>
+                    <?php foreach ($tasks as $index => $task) : ?>
+                        <li>
+                            <?php echo htmlspecialchars($task); ?>
+                            <a href="delete.php?index=<?php echo $index; ?>">Delete</a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+
             <p>Your data could be lost if you remain logged off</p>
         </section>
     </main>

@@ -133,11 +133,15 @@ main {
     margin: 0;
 }
 
+.card h2 {
+    font-size: medium;
+}
+
 h1, h2 {
     font-family: "Domine", serif;
 }
 
-p {
+p, a {
     font-family: 'Nunito Sans',sans-serif;
+    color: var(--blue-12);
 }
-
